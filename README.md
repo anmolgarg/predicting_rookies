@@ -12,3 +12,4 @@ But where does that leave the rookies? These players have no historical NFL data
 
 The goal for this project is to predict performance of new rookies in the NFL and to allow fantasy team managers to achieve higher value picks by drafting likely rookie studs.
 
+Data Visualization showing rookie season fantasy points against pre-NFL statistics here: [D3 Visualization](http://bl.ocks.org/anmolgarg/raw/9941050/)
