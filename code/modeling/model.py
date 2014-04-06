@@ -34,49 +34,49 @@ def cluster_players(df):
 
 # fantasy
 rookie = ['nfl_season', 'position', 'ffpts', 'ffpts_gp', 'team', 'games_played',
-        'pass_comp', 'pass_att', 'pass_yd', 'pass_td', 'pass_int', 
-        'rush_att', 'rush_yd', 'rush_td', 
-        'rec_target', 'rec_reception', 'rec_yd', 'rec_td', 
-        'fgm', 'fga', 'epm', 'epa', 'tackle', 'assist', 
-        'sack', 'pd', 'int', 'ff', 'fr']
+    'pass_comp', 'pass_att', 'pass_yd', 'pass_td', 'pass_int', 
+    'rush_att', 'rush_yd', 'rush_td', 
+    'rec_target', 'rec_reception', 'rec_yd', 'rec_td', 
+    'fgm', 'fga', 'epm', 'epa', 'tackle', 'assist', 
+    'sack', 'pd', 'int', 'ff', 'fr']
 
 # draft and combine
 draft_combine = ['draft_pick', 'height_combine', 'weight_combine', 'wonderlic', 'forty_yard', 
-        'bench_press', 'vertical_leap', 'broad_jump', 'shuttle', 'three_cone']
+    'bench_press', 'vertical_leap', 'broad_jump', 'shuttle', 'three_cone']
 
 # ncaa
 ncaa_sum = ['Pass Att_sum', 'Pass Comp_sum', 'Pass Conv_sum', 'Pass Int_sum', 'Pass TD_sum', 'Pass Yard_sum', 
-        'QB Hurry_sum', 'Rec_sum', 'Rec TD_sum', 'Rec Yards_sum', 
-        'Rush Att_sum', 'Rush TD_sum', 'Rush Yard_sum', 'Fumble_sum', 'Fumble Lost_sum', 
-        'Kickoff Ret_sum', 'Kickoff Ret TD_sum', 'Kickoff Ret Yard_sum', 'Kickoff Touchback_sum', 
-        'Punt Ret_sum', 'Punt Ret TD_sum', 'Punt Ret Yard_sum', 'Off 2XP Att_sum', 'Off 2XP Made_sum', 
-        'Points_sum', 'Tackle Assist_sum', 'Tackle For Loss_sum', 'Tackle For Loss Yard_sum', 'Tackle Solo_sum', 
-        'Pass Broken Up_sum', 'Sack_sum', 'Sack Yard_sum', 
-        'Int Ret_sum', 'Int Ret TD_sum', 'Int Ret Yard_sum', 
-        'Misc Ret_sum', 'Misc Ret TD_sum', 'Misc Ret Yard_sum', 'Kick/Punt Blocked_sum', 
-        'Fumble Forced_sum', 'Fum Ret_sum', 'Fum Ret TD_sum', 'Fum Ret Yard_sum', 
-        'Def 2XP Att_sum', 'Def 2XP Made_sum', 'Safety_sum', 
-        'Field Goal Att_sum', 'Field Goal Made_sum', 'Off XP Kick Att_sum', 'Off XP Kick Made_sum', 
-        'Punt_sum', 'Punt Yard_sum', 'Kickoff_sum', 'Kickoff Yard_sum', 
-        'Kickoff Onside_sum', 'Kickoff Out-Of-Bounds_sum']
+    'QB Hurry_sum', 'Rec_sum', 'Rec TD_sum', 'Rec Yards_sum', 
+    'Rush Att_sum', 'Rush TD_sum', 'Rush Yard_sum', 'Fumble_sum', 'Fumble Lost_sum', 
+    'Kickoff Ret_sum', 'Kickoff Ret TD_sum', 'Kickoff Ret Yard_sum', 'Kickoff Touchback_sum', 
+    'Punt Ret_sum', 'Punt Ret TD_sum', 'Punt Ret Yard_sum', 'Off 2XP Att_sum', 'Off 2XP Made_sum', 
+    'Points_sum', 'Tackle Assist_sum', 'Tackle For Loss_sum', 'Tackle For Loss Yard_sum', 'Tackle Solo_sum', 
+    'Pass Broken Up_sum', 'Sack_sum', 'Sack Yard_sum', 
+    'Int Ret_sum', 'Int Ret TD_sum', 'Int Ret Yard_sum', 
+    'Misc Ret_sum', 'Misc Ret TD_sum', 'Misc Ret Yard_sum', 'Kick/Punt Blocked_sum', 
+    'Fumble Forced_sum', 'Fum Ret_sum', 'Fum Ret TD_sum', 'Fum Ret Yard_sum', 
+    'Def 2XP Att_sum', 'Def 2XP Made_sum', 'Safety_sum', 
+    'Field Goal Att_sum', 'Field Goal Made_sum', 'Off XP Kick Att_sum', 'Off XP Kick Made_sum', 
+    'Punt_sum', 'Punt Yard_sum', 'Kickoff_sum', 'Kickoff Yard_sum', 
+    'Kickoff Onside_sum', 'Kickoff Out-Of-Bounds_sum']
         
 ncaa_mean = ['Pass Att_mean', 'Pass Comp_mean', 'Pass Conv_mean', 'Pass Int_mean', 'Pass TD_mean', 'Pass Yard_mean', 
-        'QB Hurry_mean', 'Rec_mean', 'Rec TD_mean', 'Rec Yards_mean', 
-        'Rush Att_mean', 'Rush TD_mean', 'Rush Yard_mean', 'Fumble_mean', 'Fumble Lost_mean', 
-        'Kickoff Ret_mean', 'Kickoff Ret TD_mean', 'Kickoff Ret Yard_mean', 'Kickoff Touchback_mean', 
-        'Punt Ret_mean', 'Punt Ret TD_mean', 'Punt Ret Yard_mean', 'Off 2XP Att_mean', 'Off 2XP Made_mean', 
-        'Points_mean', 'Tackle Assist_mean', 'Tackle For Loss_mean', 'Tackle For Loss Yard_mean', 'Tackle Solo_mean', 
-        'Pass Broken Up_mean', 'Sack_mean', 'Sack Yard_mean', 
-        'Int Ret_mean', 'Int Ret TD_mean', 'Int Ret Yard_mean', 
-        'Misc Ret_mean', 'Misc Ret TD_mean', 'Misc Ret Yard_mean', 'Kick/Punt Blocked_mean', 
-        'Fumble Forced_mean', 'Fum Ret_mean', 'Fum Ret TD_mean', 'Fum Ret Yard_mean', 
-        'Def 2XP Att_mean', 'Def 2XP Made_mean', 'Safety_mean', 
-        'Field Goal Att_mean', 'Field Goal Made_mean', 'Off XP Kick Att_mean', 'Off XP Kick Made_mean', 
-        'Punt_mean', 'Punt Yard_mean', 'Kickoff_mean', 'Kickoff Yard_mean', 
-        'Kickoff Onside_mean', 'Kickoff Out-Of-Bounds_mean']
+    'QB Hurry_mean', 'Rec_mean', 'Rec TD_mean', 'Rec Yards_mean', 
+    'Rush Att_mean', 'Rush TD_mean', 'Rush Yard_mean', 'Fumble_mean', 'Fumble Lost_mean', 
+    'Kickoff Ret_mean', 'Kickoff Ret TD_mean', 'Kickoff Ret Yard_mean', 'Kickoff Touchback_mean', 
+    'Punt Ret_mean', 'Punt Ret TD_mean', 'Punt Ret Yard_mean', 'Off 2XP Att_mean', 'Off 2XP Made_mean', 
+    'Points_mean', 'Tackle Assist_mean', 'Tackle For Loss_mean', 'Tackle For Loss Yard_mean', 'Tackle Solo_mean', 
+    'Pass Broken Up_mean', 'Sack_mean', 'Sack Yard_mean', 
+    'Int Ret_mean', 'Int Ret TD_mean', 'Int Ret Yard_mean', 
+    'Misc Ret_mean', 'Misc Ret TD_mean', 'Misc Ret Yard_mean', 'Kick/Punt Blocked_mean', 
+    'Fumble Forced_mean', 'Fum Ret_mean', 'Fum Ret TD_mean', 'Fum Ret Yard_mean', 
+    'Def 2XP Att_mean', 'Def 2XP Made_mean', 'Safety_mean', 
+    'Field Goal Att_mean', 'Field Goal Made_mean', 'Off XP Kick Att_mean', 'Off XP Kick Made_mean', 
+    'Punt_mean', 'Punt Yard_mean', 'Kickoff_mean', 'Kickoff Yard_mean', 
+    'Kickoff Onside_mean', 'Kickoff Out-Of-Bounds_mean']
         
 basics = ['class', 'college', 'conference', 'subn', 
-        'height_ncaa', 'weight_ncaa', 'Home Country', 'Home State', 'Home Town', 'Last School',]
+    'height_ncaa', 'weight_ncaa', 'Home Country', 'Home State', 'Home Town', 'Last School',]
 
 def map_features(df):
 	'''Maps out categoricals (position, college, conference, etc.) to numerics for use in modeling.
@@ -94,12 +94,12 @@ def map_features(df):
 	        features = pd.concat((features, pd.DataFrame(df2[col].fillna(-1))), axis=1)
 
 	df[['class', 'college', 'conference', 'subn', 'Home Country', 'Home State', 'Home Town', 
-     	'Last School', 'position']] = \
+	 	'Last School', 'position']] = \
 	features[['class', 'college', 'conference', 'subn', 'Home Country', 'Home State', 'Home Town', 
-        'Last School', 'position']]
-    for col in df.columns:
-    	df[col] = [0 if d<0 else d for d in df[col]]
-    return df       
+	    'Last School', 'position']]
+	for col in df.columns:
+		df[col] = [0 if d<0 else d for d in df[col]]
+	return df       
 
 def cv_rookie_model(df):
 	'''10 fold cross validation of Random Forest classifier examining AUC.'''
