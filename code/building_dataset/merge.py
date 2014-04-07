@@ -30,6 +30,7 @@ def standardize_college(col):
     col = [d.translate(table, string.punctuation).strip().replace(' ','') for d in col]
     return col
 
+
 def standardize_names(col):
     col = col.replace('pat', 'patrick').replace('ziggy', 'ezekial')
     col = col.replace('erick', 'eric').replace('will', 'william')
@@ -39,6 +40,7 @@ def standardize_names(col):
     col = col.replace('joe', 'joseph').replace('rob', 'robert')
     col = col.replace('gabe', 'gabriel').replace('nate', 'nathan')
     return col
+
 
 def merge_combine_and_draft():
     '''Outer joins combine and draft data and returns a dataframe'''
@@ -94,6 +96,7 @@ def merge_combine_draft_ncaa_and_fantasy():
     
     print 'Number of players in final dataset:', df.shape[0]
     return df
+
 
 def clean_up_data():
     '''Builds up dataset, deletes duplicates, and reorders/renames columns
