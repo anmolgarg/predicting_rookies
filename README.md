@@ -1,15 +1,19 @@
 Predicting Rookies
 ==================
 
-A predictive model for first year NFL players based on a player's college career, combine, and draft pick.
+This is the repository for a simple predictive model of NFL performance, by way of Fantasy Football points, during a player's rookie season using data freely available online. It can also be used as a starting point to creating a comprehensive NCAA -> NFL transition analysis.
 
+This project creates a predictive model for rookie season fantasy performance based on a player's NCAA career statistics, NFL Combine measurables, and NFL Draft pick.
 
-I have always been interested in seeing how college performance in sports translates to professional.  In particular, football, because it seems especially random. Some college stars never succeed in the NFL while other times, the opposite is true. I want to know if we can predict NFL success given their pre-NFL statistics.
+---
+Interactive D3 data visualization showing rookie season fantasy points against pre-NFL statistics here: [bl.ocks](http://bl.ocks.org/anmolgarg/raw/10073463/)
 
-To explore this, I used fantasy football points as a measure of success. Fantasy football, for those unfamiliar, is a game that allows participants to create virtual teams whose performance is measured using fantasy points; these points are simply an aggregate of real football statistics from the NFL such as passing yards for quarterbacks or tackles for defensive backs. At the beginning of the season, you draft your team given the entire corpus of current NFL players trying to build the top performing overall team, typically relying on the previous season's players' statistics as a guide.
+---
+To use the files in this repo, you must download all of the NCAA stats zip files from http://www.cfbstats.com/blog/college-football-data/ 
 
-But where does that leave the rookies? These players have no historical NFL data are are hard to predict. So most fantasy team managers leave these players undrafted when they can possibly be high performers.
+You must also have Python 2.7, iPython Notebook, Pandas, BeautifulSoup, and Sci-Kit Learn installed. These dependencies should be installed using pip or easy_install.
 
-The goal for this project is to predict performance of new rookies in the NFL and to allow fantasy team managers to achieve higher value picks by drafting likely rookie studs.
+Files have only been tested on Mac OS X. 
 
-Data Visualization showing rookie season fantasy points against pre-NFL statistics here: [D3 Visualization](http://bl.ocks.org/anmolgarg/raw/9941050/)
+---
+If you have any questions, plese feel free to reach out to me @anmolgarg314. I will try to help out where I can.
