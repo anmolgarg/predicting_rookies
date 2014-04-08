@@ -1,12 +1,12 @@
 Predicting Rookies
 ==================
 
-This is the repository for a simple predictive model of NFL performance, by way of Fantasy Football points, during a player's rookie season using data freely available online. It can also be used as a starting point to creating a comprehensive NCAA -> NFL transition analysis.
+This is the repository for a predictive model of rookie season NFL performance. The project uses only data freely available online and can be used to predict how well upcoming rookies will perform in the context of fantasy football. 
 
-This project creates a predictive model for rookie season fantasy performance based on a player's NCAA career statistics, NFL Combine measurables, and NFL Draft pick.
+It can also be used as a starting point to creating a comprehensive NCAA to NFL transition analysis. Data used in model includes NCAA career statistics, NFL Combine measurables, NFL Draft pick, and NFL Fantasy and real Football statistics for the years 2005 and later as that is when NCAA data becomes available.
 
 ---
-Interactive D3 data visualization showing rookie season fantasy points against pre-NFL statistics here: [bl.ocks](http://bl.ocks.org/anmolgarg/raw/10073463/)
+Interactive D3 visualization showing rookie season fantasy points against pre-NFL statistics here: [bl.ocks](http://bl.ocks.org/anmolgarg/raw/10073463/)
 
 ---
 To use the files in this repo, you must download all of the NCAA stats zip files from http://www.cfbstats.com/blog/college-football-data/ 
@@ -16,4 +16,4 @@ You must also have Python 2.7, iPython Notebook, Pandas, BeautifulSoup, and Sci-
 Files have only been tested on Mac OS X. 
 
 ---
-If you have any questions, plese feel free to reach out to me @anmolgarg314. I will try to help out where I can.
+If you have any questions, feel free to reach out to me @anmolgarg314.

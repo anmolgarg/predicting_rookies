@@ -3,65 +3,74 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
   
-  <div id="header" style="background-color:#C0C0C0;">
-    <h3 style="font-family:sans-serif";"margin-bottom:0;">NFL v College Statistics</h3>
+  <div id="header">
+    <h3 style="font-family:Helvetica Neue;margin-bottom:10;color:#348ABD;font-weight:normal;">Visualizing NFL Fantasy Performance v pre-NFL Statistics</h3>
   </div>  
 
-  <div id="content" style="font-family:sans-serif; background-color:#FFFFFF; height:10px;width:210px;float:left;font-size:14px">
-    Choose your pre-NFL statistic:
+  <div class="row">
+    <div id="content" style="font-family:Helvetica Neue; height:40px;width=1000px;font-size:14px">
+        Explore NFL rookie performance from 2006 to present against different pre-NFL statistics.  
+        </br>Filter by position by clicking on the legend color. 
+        Best when viewed on a desktop.</br>
+      </div>
   </div>
-  <form action="" id="myform">
-    <select id="Pre-NFL Statistics" style="float:left;" name="Pre-NFL Statistics" onchange="updateGraph()">
-      <option id="defaultStatOpt" value="Draft_Pick">Draft Pick</option>
-      <option value="Height_Combine">Combine Height</option>
-      <option value="Weight_Combine">Combine Weight</option>
-      <option value="Wonderlic">Combine Wonderlic</option>
-      <option value="Forty_Yard">Combine Forty Yard</option>
-      <option value="Bench_Press">Combine Bench Press</option>
-      <option value="Vertical_Leap">Combine Vertical Leap</option>
-      <option value="Broad_Jump">Combine Broad Jump</option>
-      <option value="Shuttle">Combine Shuttle</option>
-      <option value="Three_Cone">Combine Three Cone</option>
 
-      <option value="Games_Played">Fantasy Games Played</option>
+  <div class="row">
+    <div id="content" style="font-family:Helvetica Neue;height:1px;width:210px;float:left;font-size:14px">
+      Choose your pre-NFL statistic:
+    </div>
+    <form action="" id="myform">
+      <select id="Pre-NFL Statistics" style="float:left;" name="Pre-NFL Statistics" onchange="updateGraph()">
+        <option id="defaultStatOpt" value="Draft_Pick">Draft Pick</option>
+        <option value="Height_Combine">Combine Height</option>
+        <option value="Weight_Combine">Combine Weight</option>
+        <option value="Wonderlic">Combine Wonderlic*</option>
+        <option value="Forty_Yard">Combine Forty Yard*</option>
+        <option value="Bench_Press">Combine Bench Press</option>
+        <option value="Vertical_Leap">Combine Vertical Leap</option>
+        <option value="Broad_Jump">Combine Broad Jump</option>
+        <option value="Shuttle">Combine Shuttle</option>
+        <option value="Three_Cone">Combine Three Cone</option>
 
-      <option value="Pass Att_Mean">NCAA Pass Att_Mean</option>
-      <option value="Pass Comp_Mean">NCAA Pass Comp_Mean</option>
-      <option value="Pass Int_Mean">NCAA Pass Int_Mean</option>
-      <option value="Pass Td_Mean">NCAA Pass Td_Mean</option>
-      <option value="Pass Yard_Mean">NCAA Pass Yard_Mean</option>
-      <option value="Rec_Mean">NCAA Rec_Mean</option>
-      <option value="Rec Td_Mean">NCAA Rec Td_Mean</option>
-      <option value="Rec Yards_Mean">NCAA Rec Yards_Mean</option>
-      <option value="Rush Att_Mean">NCAA Rush Att_Mean</option>
-      <option value="Rush Td_Mean">NCAA Rush Td_Mean</option>
-      <option value="Rush Yard_Mean">NCAA Rush Yard_Mean</option>
-      <option value="Kickoff Ret_Mean">NCAA Kickoff Ret_Mean</option>
-      <option value="Kickoff Ret Td_Mean">NCAA Kickoff Ret Td_Mean</option>
-      <option value="Kickoff Ret Yard_Mean">NCAA Kickoff Ret Yard_Mean</option>
-      <option value="Punt Ret_Mean">NCAA Punt Ret_Mean</option>
-      <option value="Punt Ret Td_Mean">NCAA Punt Ret Td_Mean</option>
-      <option value="Punt Ret Yard_Mean">NCAA Punt Ret Yard_Mean</option>
-      <option value="Points_Mean">NCAA Points_Mean</option>
-      <option value="Tackle Assist_Mean">NCAA Tackle Assist_Mean</option>
-      <option value="Tackle For Loss_Mean">NCAA Tackle For Loss_Mean</option>
-      <option value="Tackle For Loss Yard_Mean">NCAA Tackle For Loss Yard_Mean</option>
-      <option value="Tackle Solo_Mean">NCAA Tackle Solo_Mean</option>
-      <option value="Pass Broken Up_Mean">NCAA Pass Broken Up_Mean</option>
-      <option value="Sack_Mean">NCAA Sack_Mean</option>
-      <option value="Sack Yard_Mean">NCAA Sack Yard_Mean</option>
-      <option value="Int Ret_Mean">NCAA Int Ret_Mean</option>
-      <option value="Int Ret Td_Mean">NCAA Int Ret Td_Mean</option>
-      <option value="Int Ret Yard_Mean">NCAA Int Ret Yard_Mean</option>
-      <option value="Fumble Forced_Mean">NCAA Fumble Forced_Mean</option>
-      <option value="Fum Ret_Mean">NCAA Fum Ret_Mean</option>
-      <option value="Fum Ret Td_Mean">NCAA Fum Ret Td_Mean</option>
-      <option value="Fum Ret Yard_Mean">NCAA Fum Ret Yard_Mean</option>
-      <option value="Punt Yard_Mean">NCAA Punt Yard_Mean</option>
-      <option value="Kickoff Yard_Mean">NCAA Kickoff Yard_Mean</option>
+        <option value="Games_Played">Fantasy Games Played</option>
 
-    </select>
-  </form>
+        <option value="Pass Att_Mean">NCAA Pass Att_Mean</option>
+        <option value="Pass Comp_Mean">NCAA Pass Comp_Mean</option>
+        <option value="Pass Int_Mean">NCAA Pass Int_Mean</option>
+        <option value="Pass Td_Mean">NCAA Pass Td_Mean</option>
+        <option value="Pass Yard_Mean">NCAA Pass Yard_Mean</option>
+        <option value="Rec_Mean">NCAA Rec_Mean</option>
+        <option value="Rec Td_Mean">NCAA Rec Td_Mean</option>
+        <option value="Rec Yards_Mean">NCAA Rec Yards_Mean</option>
+        <option value="Rush Att_Mean">NCAA Rush Att_Mean</option>
+        <option value="Rush Td_Mean">NCAA Rush Td_Mean</option>
+        <option value="Rush Yard_Mean">NCAA Rush Yard_Mean</option>
+        <option value="Kickoff Ret_Mean">NCAA Kickoff Ret_Mean</option>
+        <option value="Kickoff Ret Td_Mean">NCAA Kickoff Ret Td_Mean</option>
+        <option value="Kickoff Ret Yard_Mean">NCAA Kickoff Ret Yard_Mean</option>
+        <option value="Punt Ret_Mean">NCAA Punt Ret_Mean</option>
+        <option value="Punt Ret Td_Mean">NCAA Punt Ret Td_Mean</option>
+        <option value="Punt Ret Yard_Mean">NCAA Punt Ret Yard_Mean</option>
+        <option value="Points_Mean">NCAA Points_Mean</option>
+        <option value="Tackle Assist_Mean">NCAA Tackle Assist_Mean</option>
+        <option value="Tackle For Loss_Mean">NCAA Tackle For Loss_Mean</option>
+        <option value="Tackle For Loss Yard_Mean">NCAA Tackle For Loss Yard_Mean</option>
+        <option value="Tackle Solo_Mean">NCAA Tackle Solo_Mean</option>
+        <option value="Pass Broken Up_Mean">NCAA Pass Broken Up_Mean</option>
+        <option value="Sack_Mean">NCAA Sack_Mean</option>
+        <option value="Sack Yard_Mean">NCAA Sack Yard_Mean</option>
+        <option value="Int Ret_Mean">NCAA Int Ret_Mean</option>
+        <option value="Int Ret Td_Mean">NCAA Int Ret Td_Mean</option>
+        <option value="Int Ret Yard_Mean">NCAA Int Ret Yard_Mean</option>
+        <option value="Fumble Forced_Mean">NCAA Fumble Forced_Mean</option>
+        <option value="Fum Ret_Mean">NCAA Fum Ret_Mean</option>
+        <option value="Fum Ret Td_Mean">NCAA Fum Ret Td_Mean</option>
+        <option value="Fum Ret Yard_Mean">NCAA Fum Ret Yard_Mean</option>
+        <option value="Punt Yard_Mean">NCAA Punt Yard_Mean</option>
+        <option value="Kickoff Yard_Mean">NCAA Kickoff Yard_Mean</option>
+      </select>
+    </form>
+  </div>
 </head>
 
 <body>
@@ -171,4 +180,20 @@
           }
           updateGraph(document.getElementById("defaultStatOpt").value);
     </script>
+  <div class="row">
+    <div id="info">
+      <h5 class="subheader" style="font-family:Helvetica Neue;font-weight:normal;">
+        Built with <a target="_blank" href="http://d3js.org/">D3</a> and <a target="_blank" href="http://dimplejs.org/">Dimple</a>
+      </h5>
+    </div>
+  </div>
+  
+  <div id="content" style="font-family:Helvetica Neue; background-color:#FFFFFF; height:10px;width:1000px;float:left;font-size:11px">
+    *Please note that all Wonderlic scores (confidential) and 40 Yard Dash Times are always unofficial <br /> <br />
+    Data Sources: <br />
+    NCAA data from http://www.cfbstats.com/ <br />
+    NFL Combine data from http://nflcombineresults.com/ <br />
+    NFL Draft data from http://www.drafthistory.com/ <br />
+    NFL Fantasy data from http://fftoday.com/ <br /><br /> 
+  </div>
 </body>
