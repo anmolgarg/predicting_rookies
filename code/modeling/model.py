@@ -79,6 +79,7 @@ def cross_validate_model(df):
     y = df['kmeans_k2'].fillna(-1)
     cv = cross_validation.KFold(len(X), n_folds=10, indices=False)
     
+    # build optimized random forest and fit, predict probabilities for each fold. return mean AUC
     rf = RandomForestClassifier(n_estimators=100, criterion='entropy', max_features=30)
     results = []
     for traincv, testcv in cv:
@@ -94,7 +95,7 @@ def predict_rookies(train, test):
     Returns test predictions'''
     
     X_train = train[ncaa_mean+['position']+draft_combine+basics].fillna(-1)
-    X_train = preprocessing.scale(X) 
+    X_train = preprocessing.scale(X_train) 
     y_train = train['kmeans_k2'].fillna(-1)
 
     X_test = test[ncaa_mean+['position']+draft_combine+basics].fillna(-1)

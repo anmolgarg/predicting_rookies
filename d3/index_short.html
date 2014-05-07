@@ -3,26 +3,12 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://dimplejs.org/dist/dimple.v1.1.5.min.js"></script>
   
-  <div id="header">
-    <h3 style="font-family:Helvetica Neue;margin-bottom:10;color:#348ABD;font-weight:normal;">
-      Visualizing NFL Fantasy Performance v pre-NFL Statistics</h3>
-  </div>  
-
-  <div class="row">
-    <div id="content" style="font-family:Helvetica Neue; height:60px;width=1000px;font-size:14px">
-        Explore NFL rookie performance from 2006 to present against different pre-NFL statistics.</br>  
-        Filter by position by clicking on the legend color and hover over marker for more information.</br>  
-        View accompanying post at <a target="_blank" href="http://www.anmolgarg.com/predicting-rookie-performance-in-the-nfl/">Varied</a>. 
-      </div>
-  </div>
-<head>
-  
 <div class="row">
     <div id="content" style="font-family:sans-serif;height:10px;width:180px;float:left;font-size:12px">
       Choose your pre-NFL statistic:
     </div>
     <form action="" id="myform">
-      <select id="Pre-NFL Statistics" style="font-family:sans-serif;float:left;font-size:11px;height:10px" name="Pre-NFL Statistics" onchange="updateGraph()">
+      <select id="Pre-NFL Statistics" style="font-family:sans-serif;height:10px;float:left;font-size:11px" name="Pre-NFL Statistics" onchange="updateGraph()">
         <option id="defaultStatOpt" value="Draft_Pick">Draft Pick</option>
         <option value="Height_Combine">Combine Height</option>
         <option value="Weight_Combine">Combine Weight</option>
@@ -181,21 +167,3 @@
           }
           updateGraph(document.getElementById("defaultStatOpt").value);
     </script>
-
-    <div class="row">
-    <div id="info">
-      <h5 class="subheader" style="font-family:Helvetica Neue;font-weight:normal;">
-        Built with <a target="_blank" href="http://d3js.org/">D3</a> and <a target="_blank" href="http://dimplejs.org/">Dimple</a>. Best when viewed on a desktop.
-      </h5>
-    </div>
-  </div>
-  
-  <div id="content" style="font-family:Helvetica Neue; background-color:#FFFFFF; height:10px;width:1000px;float:left;font-size:11px">
-    Please note that all Wonderlic scores (confidential) and 40 Yard Dash Times are always unofficial <br /> <br />
-    Data Sources: <br />
-    NCAA data from http://www.cfbstats.com/ <br />
-    NFL Combine data from http://nflcombineresults.com/ <br />
-    NFL Draft data from http://www.drafthistory.com/ <br />
-    NFL Fantasy data from http://fftoday.com/ <br /><br /> 
-  </div>
-</body>
